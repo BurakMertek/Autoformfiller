@@ -43,7 +43,7 @@ pip install -e .
 - `pandas` - Data manipulation
 - `openpyxl` - Excel file support (optional)
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Prepare your data**: Create a CSV file with your form data
    ```csv
@@ -66,7 +66,7 @@ pip install -e .
 
 5. **Let it run**: The script will automatically fill and submit your forms!
 
-## 📖 Usage
+## Usage
 
 ### Basic Usage
 
