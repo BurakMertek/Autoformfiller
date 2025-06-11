@@ -27,14 +27,12 @@ A Python automation tool that automatically fills out forms using data from CSV 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/automatic-form-filler.git
+git clone https://github.com/BurakMertek/automatic-form-filler.git
 cd automatic-form-filler
 
 # Install required packages
-pip install -r requirements.txt
+pip install -r "Packages"
 
-# Or install the package
-pip install -e .
 ```
 
 ### Required Python Packages
