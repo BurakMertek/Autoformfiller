@@ -5,7 +5,7 @@
 
 A Python automation tool that automatically fills out forms using data from CSV files. Say goodbye to the tedious task of manually entering data into web forms or desktop applications!
 
-## 🚀 Features
+## Features
 
 - **Automated Form Filling**: Automatically fill out forms using data from CSV files
 - **Multiple Navigation Methods**: Support for Tab, Enter, and Click navigation
@@ -16,20 +16,7 @@ A Python automation tool that automatically fills out forms using data from CSV 
 - **Logging**: Comprehensive logging for debugging and monitoring
 - **Multiple Form Types**: Works with web forms and desktop applications
 
-## 📋 Table of Contents
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Data Format](#data-format)
-- [Examples](#examples)
-- [Safety Features](#safety-features)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-
-## 🛠 Installation
+## Installation
 
 ### Prerequisites
 
@@ -120,7 +107,7 @@ filler.fill_forms(data, field_order, max_records=10)
 filler.fill_forms(data, field_order, start_row=5)
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 The application supports extensive configuration through the `FormFillerConfig` class:
 
@@ -148,7 +135,7 @@ export FF_TYPING_INTERVAL=0.05
 export FF_NAVIGATION_METHOD=tab
 ```
 
-## 📊 Data Format
+## Data Format
 
 ### CSV Format
 
@@ -173,7 +160,7 @@ Jane Smith,jane@example.com,555-5678,Tech Corp,456 Oak Ave,Somewhere,NY,67890
 
 The application will automatically skip empty fields (NaN values) unless configured otherwise.
 
-## 💡 Examples
+## Examples
 
 ### Example 1: Simple Contact Form
 
@@ -209,77 +196,4 @@ for start_row in range(0, total_records, batch_size):
     input("Press Enter to continue to next batch...")
 ```
 
-## 🛡️ Safety Features
 
-### Failsafe Protection
-- Move your mouse to the top-left corner of the screen to immediately stop the automation
-- This is enabled by default and can be disabled in configuration
-
-### Keyboard Interrupt
-- Press `Ctrl+C` to stop the process gracefully
-- The application will tell you which record it stopped at so you can resume
-
-### Error Handling
-- Comprehensive error handling with informative log messages
-- Automatic recovery from common GUI automation issues
-
-### Validation
-- Configuration validation ensures settings are valid
-- Data validation checks for required columns and formats
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**1. Fields not being filled correctly**
-- Check that your `field_order` matches the actual form field sequence
-- Adjust timing settings if fields are being filled too quickly
-- Ensure the form is active and focused
-
-**2. Script stops unexpectedly**
-- Check the log output for error messages
-- Verify that PyAutoGUI failsafe hasn't been triggered
-- Make sure the form hasn't changed pages unexpectedly
-
-**3. Timing issues**
-- Increase delay settings for slower systems or complex forms
-- Use the `slow_reliable()` configuration for problematic forms
-- Test with a single record first
-
-**4. Navigation problems**
-- Try different navigation methods ('tab' vs 'enter')
-- Some forms may require clicking instead of keyboard navigation
-- Check if form has unusual tab order
-
-### Debug Mode
-
-Enable debug logging for detailed information:
-
-```python
-config = FormFillerConfig()
-config.log_level = 'DEBUG'
-```
-
-### Getting Help
-
-1. Check the [troubleshooting guide](docs/TROUBLESHOOTING.md)
-2. Review the example files in the `examples/` directory
-3. Open an issue on GitHub with detailed information about your problem
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-python -m pytest tests/
-```
-
-Run with coverage:
-
-```bash
-python -m pytest tests/ --cov=src
-```
-
-## 📝 Contributing
-
-1.
